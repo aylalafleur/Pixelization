@@ -3,10 +3,12 @@ import math
 
 
 
-def pixel(file):
+def pixel():
+    file = input("What's the name of your image? ")
     image = Image.open(file)
     size = width, height = image.size
-    num = int(input("How many pixels do you want? "))
+    
+    num = int(input("How many pixels do you want total? "))
     num = 1/num
     pix = int(math.sqrt(((width*height)*num)))
     right = low = pix
@@ -45,5 +47,5 @@ def average_color (image, box):
 
 
 
-pixel("flower.jpg")
+pixel()
     
